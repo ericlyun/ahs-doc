@@ -6,13 +6,6 @@ py4web: the reference Manual
    :maxdepth: 2
    :caption: Contents:
 
-   chapter-01
-   chapter-02
-   chapter-03
-   chapter-04
-   chapter-05
-   chapter-06
-   chapter-07
    chapter-08
    chapter-09
    chapter-10
