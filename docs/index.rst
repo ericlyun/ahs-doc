@@ -8,6 +8,8 @@ py4web: the reference Manual
 
    Overview.rst
    Schedule.rst
+   Organizers.rst
+   RelatedPapers.rst
    
 
 Indices and tables
