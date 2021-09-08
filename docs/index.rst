@@ -6,15 +6,8 @@ py4web: the reference Manual
    :maxdepth: 2
    :caption: Contents:
 
-   chapter-08
-   chapter-09
-   chapter-10
-   chapter-11
-   chapter-12
-   chapter-13
-   chapter-14
-   chapter-15
-   chapter-16
+   Overview.rst
+   Schedule.rst
    
 
 Indices and tables
