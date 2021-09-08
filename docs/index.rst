@@ -1,18 +1,14 @@
 
-py4web: the reference Manual
+AHS: An Agile Framework for Hardware Specialization and Software Mapping
 ============================
+.. figure:: images/system.png
+    :align: center
+    :figwidth: 1000px
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
    Overview.rst
    Schedule.rst
-   
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   Organizers.rst
+   Related Papers.rst
