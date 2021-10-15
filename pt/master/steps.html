@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Install Steps &mdash; Documentação AHS 1.20210407.1</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/toggle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logo-32x32.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="_static/js/toggle.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Pesquisar" href="search.html" />
+    <link rel="prev" title="AHS: An Agile Framework for Hardware Specialization and Software Mapping" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> AHS
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                master
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Pesquisar docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
+              <p class="caption" role="heading"><span class="caption-text">Conteúdo:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Install Steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#install">Install</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#shell-script">Shell script</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#docker">Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#requirement">Requirement</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#apt">Apt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pip">Pip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sbt">Sbt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#git">Git</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#configure-compile">Configure &amp; Compile</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#hasco">Hasco</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tenet">TENET</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dockerfile">Dockerfile</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#run">Run</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hasco-1">HASCO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tenet-1">TENET</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tensorlib">TensorLib</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flextensor">FlexTensor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu de navegação móvel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AHS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Navegação da página">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Install Steps</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/eric-lyun/tutorial/blob/master/docs/steps.rst" class="fa fa-github"> Editar no GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="install-steps">
+<h1>Install Steps<a class="headerlink" href="#install-steps" title="Link permanente para este título"></a></h1>
+<div class="section" id="install">
+<h2>Install<a class="headerlink" href="#install" title="Link permanente para este título"></a></h2>
+<div class="section" id="shell-script">
+<h3>Shell script<a class="headerlink" href="#shell-script" title="Link permanente para este título"></a></h3>
+<p>You can use this shell <a class="reference download internal" download="" href="_downloads/9064601015f9cd5e747a641dbdacf3aa/install_ahs.sh"><code class="xref download docutils literal notranslate"><span class="pre">shell</span></code></a> script to install everything.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sh –c “<span class="k">$(</span>wget https://pku-ahs.github.io/tutorial/en/master/_downloads/9064601015f9cd5e747a641dbdacf3aa/install_ahs.sh –O -<span class="k">)</span>”
+<span class="nb">source</span> ~/.bashrc
+</pre></div>
+</div>
+<p>The shell script is tested under Ubuntu:20.04LTS. If you use another OS,
+or if you use Anaconda or Virtualenv for python, you may need to modify
+the script yourself. For windows users, it is best to use WSL.</p>
+</div>
+<div class="section" id="docker">
+<h3>Docker<a class="headerlink" href="#docker" title="Link permanente para este título"></a></h3>
+<p>You can pull our docker. We had everything prepared, configured and
+installed for you.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker pull ericlyun/ahsmicro:latest
+docker run –it ahsmicro:latest /bin/bash
+</pre></div>
+</div>
+</div>
+<div class="section" id="requirement">
+<h3>Requirement<a class="headerlink" href="#requirement" title="Link permanente para este título"></a></h3>
+<div class="section" id="apt">
+<h4>Apt<a class="headerlink" href="#apt" title="Link permanente para este título"></a></h4>
+<ul class="simple">
+<li><p>python3</p></li>
+<li><p>python3-pip</p></li>
+<li><p>git</p></li>
+<li><p>llvm-9</p></li>
+<li><p>cmake</p></li>
+<li><p>build-essential</p></li>
+<li><p>make</p></li>
+<li><p>autoconf</p></li>
+<li><p>automake</p></li>
+<li><p>scons</p></li>
+<li><p>libboost-all-dev</p></li>
+<li><p>libgmp10-dev</p></li>
+<li><p>libtool</p></li>
+<li><p>default-jdk</p></li>
+<li><p>csvtool</p></li>
+</ul>
+</div>
+<div class="section" id="pip">
+<h4>Pip<a class="headerlink" href="#pip" title="Link permanente para este título"></a></h4>
+<ul class="simple">
+<li><p>numpy</p></li>
+<li><p>decorator</p></li>
+<li><p>attrs</p></li>
+<li><p>tornado</p></li>
+<li><p>psutil</p></li>
+<li><p>xgboost</p></li>
+<li><p>cloudpickle</p></li>
+<li><p>tensorflow</p></li>
+<li><p>tqdm</p></li>
+<li><p>IPython</p></li>
+<li><p>botorch</p></li>
+<li><p>jinja2</p></li>
+<li><p>pandas</p></li>
+<li><p>scipy</p></li>
+<li><p>scikit-learn</p></li>
+<li><p>plotly</p></li>
+</ul>
+</div>
+<div class="section" id="sbt">
+<h4>Sbt<a class="headerlink" href="#sbt" title="Link permanente para este título"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;deb https://repo.scala-sbt.org/scalasbt/debian all main&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/sbt.list
+<span class="nb">echo</span> <span class="s2">&quot;deb https://repo.scala-sbt.org/scalasbt/debian /&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/sbt_old.list
+curl -sL <span class="s2">&quot;https://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823&quot;</span> <span class="p">|</span> sudo apt-key add
+sudo apt-get update
+sudo apt-get install sbt
+</pre></div>
+</div>
+</div>
+<div class="section" id="git">
+<h4>Git<a class="headerlink" href="#git" title="Link permanente para este título"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone --recursive -b micro_tutorial https://github.com/pku-liang/HASCO.git
+git clone --recursive -b micro_tutorial https://github.com/pku-liang/TENET.git
+git clone https://github.com/KnowingNothing/FlexTensor-Micro.git
+git clone -b demo https://github.com/pku-liang/TensorLib.git
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="configure-compile">
+<h3>Configure &amp; Compile<a class="headerlink" href="#configure-compile" title="Link permanente para este título"></a></h3>
+<div class="section" id="hasco">
+<h4>Hasco<a class="headerlink" href="#hasco" title="Link permanente para este título"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ./ HASCO
+bash ./install.sh
+
+<span class="c1"># Settings</span>
+vim ~/.bashrc
+<span class="c1"># append:</span>
+<span class="c1"># export TVM_HOME=&lt;install_dir&gt;/HASCO/src/tvm</span>
+<span class="c1"># export AX_HOME=&lt;install_dir&gt;/HASCO/src/Ax</span>
+<span class="c1"># export PYTHONPATH=$TVM_HOME/python:$AX_HOME:${PYTHONPATH}</span>
+<span class="nb">source</span> ~/.bashrc
+</pre></div>
+</div>
+</div>
+<div class="section" id="tenet">
+<h4>TENET<a class="headerlink" href="#tenet" title="Link permanente para este título"></a></h4>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ./TENET
+bash ./init.sh
+vim ~/.bashrc
+<span class="c1"># append:</span>
+<span class="c1"># export LD_LIBRARY_PATH=&lt;install_dir&gt;/TENET/external/lib:$LD_LIBRARY_PATH</span>
+<span class="nb">source</span> ~/.bashrc
+
+<span class="nb">cd</span> TENET
+make cli
+make hasco
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="dockerfile">
+<h3>Dockerfile<a class="headerlink" href="#dockerfile" title="Link permanente para este título"></a></h3>
+<p>The size of the docker is about 7G. If you find it difficult to pull it
+due to its size, you can run the following Dockerfile to build the
+docker by yourself.</p>
+<div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="c"># syntax=docker/dockerfile:1</span>
+<span class="k">FROM</span> <span class="s">ubuntu:20.04</span>
+
+<span class="k">ENV</span> <span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninterative
+
+<span class="k">RUN</span> apt-get update <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> apt-get -y -q install git sudo vim python3 python3-pip llvm-9 cmake build-essential make autoconf automake scons libboost-all-dev libgmp10-dev libtool curl default-jdk csvtool <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> pip3 install tensorflow decorator attrs tornado psutil xgboost cloudpickle tqdm IPython botorch jinja2 pandas scipy scikit-learn plotly <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;deb https://repo.scala-sbt.org/scalasbt/debian all main&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/sbt.list <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">&quot;deb https://repo.scala-sbt.org/scalasbt/debian /&quot;</span> <span class="p">|</span> sudo tee /etc/apt/sources.list.d/sbt_old.list <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> curl -sL <span class="s2">&quot;https://keyserver.ubuntu.com/pks/lookup?op=get&amp;search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823&quot;</span> <span class="p">|</span> sudo apt-key add <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> sudo apt-get update <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> sudo apt-get -y -q install sbt <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> mkdir AHS <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> <span class="nb">cd</span> AHS <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> git clone --recursive -b micro_tutorial https://github.com/pku-liang/HASCO.git <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> git clone --recursive -b micro_tutorial https://github.com/pku-liang/TENET.git <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> git clone -b demo https://github.com/pku-liang/TensorLib.git <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> git clone https://github.com/KnowingNothing/FlexTensor-Micro.git <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> <span class="nb">cd</span> HASCO <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> bash ./install.sh <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> <span class="nb">cd</span> ../TENET <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> bash ./init.sh
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="run">
+<h2>Run<a class="headerlink" href="#run" title="Link permanente para este título"></a></h2>
+<div class="section" id="hasco-1">
+<span id="id1"></span><h3>HASCO<a class="headerlink" href="#hasco-1" title="Link permanente para este título"></a></h3>
+<p>Config</p>
+<p><code class="docutils literal notranslate"><span class="pre">vim</span> <span class="pre">src/codesign/config.py</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">mastro_home</span> <span class="o">=</span> <span class="s2">&quot;&lt;install_dir&gt;/HASCO/src/maestro&quot;</span>
+<span class="n">tenet_path</span> <span class="o">=</span> <span class="s2">&quot;&lt;install_dir&gt;/TENET/bin/HASCO_Interface&quot;</span>
+
+<span class="n">tenet_params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;avg_latency&quot;</span><span class="p">:</span><span class="mi">16</span> <span class="c1"># average latency for each computation</span>
+    <span class="s2">&quot;f_trans&quot;</span><span class="p">:</span><span class="mi">12</span> <span class="c1"># energy consume for each element transfered</span>
+    <span class="s2">&quot;f_work&quot;</span><span class="p">:</span><span class="mi">16</span> <span class="c1"># energy consume for each element in the workload</span>
+<span class="p">}</span>
+
+<span class="n">tensorlib_home</span> <span class="o">=</span> <span class="s2">&quot;&lt;install_dir&gt;/TensorLib&quot;</span>
+<span class="n">tensorlib_main</span> <span class="o">=</span> <span class="s2">&quot;tensorlib.ParseJson&quot;</span>
+</pre></div>
+</div>
+<p>Python API</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3 testbench/co_mobile_conv.py
+python3 testbench/co_resnet_gemm.py
+...
+</pre></div>
+</div>
+<p>CLI</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> HASCO
+./hasco.py -h
+<span class="c1"># Run a GEMM intrinsic with MobileNetV2 benchmark</span>
+./hasco.py -i GEMM -b MobileNetv2 -f gemm_example.json -l <span class="m">1000</span> -p <span class="m">20</span> -a <span class="m">0</span>
+</pre></div>
+</div>
+<p>Results:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rst/MobileNetV2_CONV.csv</span></code> config of best design for each
+constraint, view with <code class="docutils literal notranslate"><span class="pre">column</span> <span class="pre">-s,</span> <span class="pre">-t</span> <span class="pre">&lt;</span> <span class="pre">MobileNetV2_CONV.csv</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rst/software/MobileNetV2_CONV_*</span></code> tvm IR for each design</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rst/hardware/CONV_*.json</span></code> TensorLib config for each design</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rst/hardware/CONV_*.v</span></code> TensorLib generated Verilog</p></li>
+</ul>
+</div>
+<div class="section" id="tenet-1">
+<span id="id2"></span><h3>TENET<a class="headerlink" href="#tenet-1" title="Link permanente para este título"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> TENET
+
+<span class="c1"># Help Text</span>
+./bin/tenet -h
+
+<span class="c1"># Run a KC-systolic dataflow</span>
+./bin/tenet -p ./dataflow_example/pe_array.p -s ./dataflow_example/conv.s -m ./dataflow_example/KC_systolic_dataflow.m -o output.csv --all
+
+<span class="c1"># Run a OxOy dataflow</span>
+./bin/tenet -p ./dataflow_example/pe_array.p -s ./dataflow_example/conv.s -m ./dataflow_example/OxOy_dataflow.m -o output.csv --all
+
+<span class="c1"># Run all layers in MobileNet</span>
+./bin/tenet -e ./network_example/MobileNet/config -d ./network_example -o output.csv --all
+</pre></div>
+</div>
+<p>Result:<code class="docutils literal notranslate"><span class="pre">output.csv</span></code></p>
+</div>
+<div class="section" id="tensorlib">
+<h3>TensorLib<a class="headerlink" href="#tensorlib" title="Link permanente para este título"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> TensorLib
+
+<span class="c1"># Optional, download the requirements from MAVEN, so that the rest instructions runs faster</span>
+sbt compile
+
+<span class="c1"># Examples of Scala APIs</span>
+sbt <span class="s2">&quot;runMain tensorlib.Example_GenConv2D&quot;</span>
+
+sbt <span class="s2">&quot;runMain tensorlib.Example_GenGEMM&quot;</span>
+
+<span class="c1"># Examples of JSON interface</span>
+sbt <span class="s2">&quot;runMain tensorlib.ParseJson ./examples/conv2d.json ./output/conv2d.v&quot;</span>
+
+sbt <span class="s2">&quot;runMain tensorlib.ParseJson ./examples/gemm.json ./output/gemm.v&quot;</span>
+
+<span class="c1"># Testing the result</span>
+sbt <span class="s2">&quot;runMain tensorlib.Test_Runner_Gemm&quot;</span>
+</pre></div>
+</div>
+<p>Result:</p>
+<p>Scala Interface: <code class="docutils literal notranslate"><span class="pre">PEArray.v</span></code></p>
+<p>ParseJson: the second argument you specified.</p>
+</div>
+<div class="section" id="flextensor">
+<h3>FlexTensor<a class="headerlink" href="#flextensor" title="Link permanente para este título"></a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> FlexTensor-Micro
+<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:/path/to/FlexTensor-Micro
+<span class="nb">cd</span> FlexTensor-Micro/flextensor/tutorial
+
+<span class="c1"># First, CPU experiments</span>
+<span class="nb">cd</span> conv2d_llvm
+
+<span class="c1"># run flextensor</span>
+python optimize_conv2d.py --shapes res --target llvm --parallel <span class="m">8</span> --timeout <span class="m">20</span> --log resnet_config.log
+
+<span class="c1"># run test</span>
+python optimize_conv2d.py --test resnet_optimize_log.txt
+
+<span class="c1"># run baseline</span>
+python conv2d_baseline.py --type tvm_generic --shapes res --number <span class="m">100</span>
+
+<span class="c1"># run plot</span>
+python plot.py
+
+<span class="c1"># Next, GPU experiments</span>
+<span class="nb">cd</span> ../conv2d_cuda
+
+<span class="c1"># run flextensor</span>
+python optimize_conv2d.py --shapes res --target cuda --parallel <span class="m">4</span> --timeout <span class="m">20</span> --log resnet_config.log
+
+<span class="c1"># run test</span>
+python optimize_conv2d.py --test resnet_optimize_log.txt
+
+<span class="c1"># run baseline</span>
+python conv2d_baseline.py --type pytorch --shapes res --number <span class="m">100</span>
+
+<span class="c1"># run plot</span>
+python plot.py
+
+<span class="c1"># At last, VNNI experiments</span>
+<span class="nb">cd</span> ../gemm_vnni
+
+<span class="c1"># run flextensor (cascadelake)</span>
+python optimize_gemm.py --target <span class="s2">&quot;llvm -mcpu=cascadelake&quot;</span> --target_host <span class="s2">&quot;llvm -mcpu=cascadelake&quot;</span> --parallel <span class="m">8</span> --timeout <span class="m">20</span> --log gemm_config.log --dtype int32
+
+<span class="c1"># run flextensor (skylake)</span>
+python optimize_gemm.py --target <span class="s2">&quot;llvm -mcpu=skylake-avx512&quot;</span> --target_host <span class="s2">&quot;llvm -mcpu=skylake-avx512&quot;</span> --parallel <span class="m">8</span> --timeout <span class="m">20</span> --log gemm_config.log
+
+<span class="c1"># run test</span>
+python optimize_gemm.py --test gemm_optimize_log.txt
+
+<span class="c1"># run baseline</span>
+python gemm_baseline.py --type numpy --number <span class="m">100</span>
+
+<span class="c1"># run plot</span>
+python plot.py
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Rodapé">
+        <a href="index.html" class="btn btn-neutral float-left" title="AHS: An Agile Framework for Hardware Specialization and Software Mapping" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, BSD-3-Clause License.</p>
+  </div>
+
+  Compilado com <a href="https://www.sphinx-doc.org/">Sphinx</a> usando um
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      
+      
+     <span class="fa fa-element">
+     <input class="container_toggle" type="checkbox" id="switch" name="mode">
+     <label for="switch"></label>
+     </span>
+      
+      v: master
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Idiomas</dt>
+        
+          
+          <dd><a href="/tutorial/en/master/">en</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/tutorial/pt/master/">pt</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Versões</dt>
+        
+          
+          <dd><a href="/tutorial/pt/dev/">dev</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/tutorial/pt/master/">master</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Transferências</dt>
+        
+          <dd><a href="/tutorial/pt/master/tutorial_pt_master.pdf">pdf</a></dd>
+        
+          <dd><a href="/tutorial/pt/master/tutorial_pt_master.epub">epub</a></dd>
+        
+      </dl>
+      
+      
+      <hr/>
+      Free document hosting provided by <a href="https://pages.github.com/">GitHub Pages</a>.
+ 
+    </div>
+  </div>
+
+ <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>

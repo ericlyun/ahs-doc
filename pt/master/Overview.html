@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="pt" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Overview &mdash; Documentação AHS 1.20210407.1</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/toggle.css" type="text/css" />
+    <link rel="shortcut icon" href="_static/logo-32x32.ico"/>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+        <script src="_static/js/toggle.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Pesquisar" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> AHS
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                master
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Pesquisar docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Menu de navegação">
+              <p class="caption" role="heading"><span class="caption-text">Conteúdo:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="steps.html">Install Steps</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Menu de navegação móvel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">AHS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Navegação da página">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Overview</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/eric-lyun/tutorial/blob/master/docs/Overview.rst" class="fa fa-github"> Editar no GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Link permanente para este título"></a></h1>
+<div class="figure align-center" style="width: 1000px">
+<img alt="_images/system.png" src="_images/system.png" />
+</div>
+<p>As Moore’s law is approaching to the end, designing specialized hardware along with the software that map the applications onto the specialized hardware is a promising solution. The hardware design determines the peak performance, while the software is also important as it determines the actual performance. Hardware/software (HW/SW) co-design can optimize the hardware acceleration and software mapping in concert and improve overall performance. However, the current flow designs hardware and software in isolation. More importantly, both hardware and software are difficult to design and optimize due to the low level programming and huge design space.</p>
+<p>In this tutorial, we present AHS, an Agile framework for Hardware specialization and Software mapping for tensor applications. Given a tensor application described using high level language, AHS can automatically define the interfaces between the hardware and software, navigate the huge design space synergistically, and automatically generate the hardware implementation and software mapping. AHS consists of several components and each component comes with an open source tool. First, we introduce HASCO [ISCA’21], a tool for hardware and software co-design. HASCO uses a matching approach based on a loop-based IR to explore different HW/SW partitioning methods. HASCO employs different DSE algorithms for hardware and software due to different design goals and evaluation costs. Second, we introduce TENET [ISCA’21], a tool for hardware dataflow notation and performance model. TENET can cover the design space of hardware dataflows completely using relation-centric notation. Third, we introduce TensorLib [DAC’21], the synthesis backend for TENET. TensorLib can automatically generate the hardware dataflow implementation written in Chisel. Finally, we introduce Flextensor [ASPLOS’20], a tool for automatic software mapping and optimization. Flextensor can automatically generate optimized software implementation for various hardware platforms including CPUs, GPUs, FPGAs, and ASICs.</p>
+</div>
+<div class="section" id="schedule">
+<h1>Schedule<a class="headerlink" href="#schedule" title="Link permanente para este título"></a></h1>
+<p>The tutorial starts with an overview of the AHS Project followed by a series of technical presentation and open source tools demo. The tutorial covers all the components of AHS including hardware and software co-design, hardware specialization, and software mapping.</p>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">Schedule</span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Time</p></th>
+<th class="head"><p>Agenda</p></th>
+<th class="head"><p>Presenter</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>10mins</p></td>
+<td><p>Overview</p></td>
+<td><p>Yun Eric Liang</p></td>
+</tr>
+<tr class="row-odd"><td><p>40mins</p></td>
+<td><p>HASCO: co-design framework</p></td>
+<td><p>Zizhang Luo</p></td>
+</tr>
+<tr class="row-even"><td><p>40mins</p></td>
+<td><p>TENET: hardware dataflow modeling</p></td>
+<td><p>Liqiang Lu</p></td>
+</tr>
+<tr class="row-odd"><td><p>10mins</p></td>
+<td><p>Break</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>40mins</p></td>
+<td><p>Tensorlib: automatic hardware synthesis</p></td>
+<td><p>Liangcheng Jia</p></td>
+</tr>
+<tr class="row-odd"><td><p>40mins</p></td>
+<td><p>FlexTensor: automatic software mapping</p></td>
+<td><p>Size Zheng</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="organizers">
+<h1>Organizers<a class="headerlink" href="#organizers" title="Link permanente para este título"></a></h1>
+<ul class="simple">
+<li><p>Yun (Eric) Liang is currently an associate professor at School of EECS, Peking University. His research interests include computer architecture, electronic design automation, and compiler. He has authored over 100 scientific publications in ISCA, MICRO, DAC, FPGA, etc. His research has been recognized by two best paper awards and six best paper nominations. He serves as technical program committees for MICRO, ISCA, ASPLOS, HPCA, DAC, FPGA, FCCM, etc. and associate editors for ACM TECS and TRETS.</p></li>
+<li><p>Zizhang Luo is currently a final year under-graduate student at Peking University. He is interested in architecture and software co-design for domain specific chips.</p></li>
+<li><p>Liqiang Lu is a 5th year PhD student at Peking University. He obtained his B.S. degree from the same university in 2017. He is interested in spatial architecture and reconfigurable computing.</p></li>
+<li><p>Liancheng Jia is a 4rd year PhD student at Peking University. He obtained his B.S degree from the same university in 2018. He is interested in high level synthesis and agile hardware design.</p></li>
+<li><p>Size Zheng is a 3rd year PhD student at Peking University. He obtained his B.S degree from the same university in 2019. He is interested in compiler design and optimization for domain specific accelerators.</p></li>
+</ul>
+</div>
+<div class="section" id="related-papers">
+<h1>Related papers<a class="headerlink" href="#related-papers" title="Link permanente para este título"></a></h1>
+<ul class="simple">
+<li><p>Size Zheng, et al. “FlexTensor: An Automatic Schedule Exploration and Optimization Framework for Tensor Computation on Heterogeneous System,” ASPLOS, 2020.</p></li>
+<li><p>Qingcheng Xiao, et al. “HASCO: Towards Agile Hardware and Software Co-design for Tensor Computation,” ISCA, 2021.</p></li>
+<li><p>Liqiang Lu, et al. “TENET: A Framework for Modeling Tensor Dataflow based on Relation-centric Notation,” ISCA, 2021.</p></li>
+<li><p>Liancheng Jia, et al. “TensorLib: A Spatial Accelerator Generation Framework for Tensor Algebra,” DAC, 2021.</p></li>
+</ul>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, BSD-3-Clause License.</p>
+  </div>
+
+  Compilado com <a href="https://www.sphinx-doc.org/">Sphinx</a> usando um
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    fornecido por <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      <span class="fa fa-book"> Read the Docs</span>
+      
+      
+     <span class="fa fa-element">
+     <input class="container_toggle" type="checkbox" id="switch" name="mode">
+     <label for="switch"></label>
+     </span>
+      
+      v: master
+      <span class="fa fa-caret-down"></span>
+    </span>
+    <div class="rst-other-versions">
+      
+      <dl>
+        <dt>Idiomas</dt>
+        
+          
+          <dd><a href="/tutorial/en/master/">en</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/tutorial/pt/master/">pt</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Versões</dt>
+        
+          
+          <dd><a href="/tutorial/pt/dev/">dev</a></dd>
+          
+        
+           <strong> 
+          <dd><a href="/tutorial/pt/master/">master</a></dd>
+           </strong> 
+        
+      </dl>
+      
+      
+      <dl>
+        <dt>Transferências</dt>
+        
+          <dd><a href="/tutorial/pt/master/tutorial_pt_master.pdf">pdf</a></dd>
+        
+          <dd><a href="/tutorial/pt/master/tutorial_pt_master.epub">epub</a></dd>
+        
+      </dl>
+      
+      
+      <hr/>
+      Free document hosting provided by <a href="https://pages.github.com/">GitHub Pages</a>.
+ 
+    </div>
+  </div>
+
+ <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>  
+
+  <style>
+         .wy-nav-content { max-width: none; }
+  </style>
+
+
+
+</body>
+</html>
